@@ -1,0 +1,15 @@
+@import "../../../index.css";
+
+.btn {
+  background-color: var(--bg-01);
+  color: var(--color-02);
+  padding: 0.7em 1.2em;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  color: var(--color-01);
+}
