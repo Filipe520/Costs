@@ -19,6 +19,10 @@
   --bg-02: #efefef; /* container */
   --bg-03: #222222; /* navbar */
 
+  /* trasparent */
+
+  --bg-trasparent-01: rgba(0, 0, 0, 0.541);
+
   /* Borders */
   --border-01: rgba(255, 255, 255, 0.233); /* author's edge */
 }
