@@ -1,8 +1,8 @@
 @import "../../../index.css";
 
 .footer {
-  background-color: #222;
-  color: #fff;
+  background-color: var(--bg-01);
+  color: var(--color-02);
   padding: 3em;
   text-align: center;
 }
@@ -31,10 +31,28 @@
 }
 
 .copy_right {
-  margin-top: 2em;
+  margin: 1em 0;
 }
 
 .copy_right span {
   font-weight: bold;
   color: var(--color-01);
+}
+
+.Autor {
+  padding-top: 10px;
+  border-top: 1px solid var(--border-01);
+}
+
+.Autor a {
+  color: var(--color-03);
+  text-decoration: none;
+}
+
+.Autor a:hover {
+  color: var(--color-01);
+}
+
+.Autor a:active {
+  opacity: 0.8;
 }

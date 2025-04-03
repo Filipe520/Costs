@@ -1,6 +1,6 @@
 /* Container.module.css */
 .container {
-  width: 1200px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -11,22 +11,12 @@
   min-height: 75%;
 }
 
-.color {
-  color: red;
-}
-
 .min_height {
   min-height: 75%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 1000px) {
   .container {
-    width: 700px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    width: 100%;
+    width: 1200px;
   }
 }

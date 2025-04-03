@@ -1,9 +1,11 @@
+@import "../../../index.css";
+
 .navBar {
   display: flex;
 
   justify-content: space-between;
 
-  background-color: #222;
+  background-color: var(--bg-03);
   padding: 1em;
 }
 
@@ -19,12 +21,12 @@
 }
 
 .item a {
-  color: #fff;
+  color: var(--color-02);
   text-decoration: none;
 }
 
 .item a:hover {
-  color: #fff;
+  color: var(--color-02);
   text-decoration: none;
 }
 

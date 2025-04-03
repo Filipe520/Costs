@@ -20,6 +20,19 @@ const Footer = () => {
       <p className={styles.copy_right}>
         <span>Costs</span> &copy; 2025
       </p>
+
+      <p className={styles.Autor}>
+        Desenvolvidor -{" "}
+        <strong>
+          <a
+            href="https://www.instagram.com/filipealves520/"
+            target="_blank"
+            rel="external"
+          >
+            Filipe Alves
+          </a>
+        </strong>
+      </p>
     </footer>
   );
 };

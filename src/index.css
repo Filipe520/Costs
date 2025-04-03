@@ -8,13 +8,24 @@
 }
 
 :root {
-  /* Yellow for text*/
-  --color-01: #ffbb33;
+  /* Texts */
+  --color-01: #ffbb33; /* footer */
+  --color-02: #fff; /* texts & icons */
+  --color-03: #ffffff; /* my name(autor) */
+  --color-04: #7b7b7b; /* home => p */
+
+  /* Background */
+  --bg-01: #222; /* footer */
+  --bg-02: #efefef; /* container */
+  --bg-03: #222222; /* navbar */
+
+  /* Borders */
+  --border-01: rgba(255, 255, 255, 0.233); /* author's edge */
 }
 
 html,
 body,
 #root {
-  background-color: #efefef;
+  background-color: var(--bg-02);
   height: 100%;
 }
