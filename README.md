@@ -13,3 +13,4 @@ If you are developing a production application, we recommend using TypeScript an
 
 ### Códigos no Terminal:
 - npm install json-server react-icons react-router-dom uuid
+- npm install

@@ -4,11 +4,17 @@
 
   box-sizing: border-box;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-html, body, #root{
+:root {
+  /* Yellow for text*/
+  --color-01: #ffbb33;
+}
+
+html,
+body,
+#root {
   background-color: #efefef;
   height: 100%;
 }
-
