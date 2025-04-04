@@ -22,7 +22,7 @@ const Footer = () => {
       </p>
 
       <p className={styles.Autor}>
-        Desenvolvidor -{" "}
+        Desenvolvedor -{" "}
         <strong>
           <a
             href="https://www.instagram.com/filipealves520/"
