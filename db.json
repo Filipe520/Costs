@@ -1,21 +1,193 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "92f5",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "7ba4",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "9827",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "48c4",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "03e3",
+      "Name": "qweqdasd",
+      "budget": "2223123",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "22b1",
+      "Name": "ads",
+      "budget": "222",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "70b4",
+      "Name": "Vai enviar para backend",
+      "budget": "5000",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "34e5",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "3d16",
+      "Name": "e",
+      "budget": "333",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "7a6e",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "3114",
+      "cost": 0,
+      "services": [],
+      "Name": "f",
+      "budget": "21262",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      }
+    },
+    {
+      "id": "b031",
+      "cost": 0,
+      "services": [],
+      "Name": "e",
+      "budget": "21262",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      }
+    },
+    {
+      "id": "a607",
+      "cost": 0,
+      "services": [],
+      "Name": "a",
+      "budget": "2",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      }
+    },
+    {
+      "id": "48f9",
+      "Name": "f",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "82db",
+      "name": "Filipe",
+      "budget": "22",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "8214",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "4f03",
+      "name": "Olá, react quanto tempo",
+      "budget": "250",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "d20a",
+      "name": "Filipe",
+      "budget": "22",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "9b68",
+      "name": "",
+      "budget": "",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "3085",
+      "name": "",
+      "budget": "",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
   "categories": [
     {
-      "id": 1,
-      "name": "Project 1",
+      "id": "1",
+      "name": "Infra",
       "description": "Description for Project 1",
       "status": "active"
     },
     {
-      "id": 2,
-      "name": "Project 2",
+      "id": "2",
+      "name": "Desenvolvimento",
       "description": "Description for Project 2",
       "status": "inactive"
     },
     {
-      "id": 3,
-      "name": "Project 3",
+      "id": "3",
+      "name": "Design",
+      "description": "Description for Project 3",
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento",
       "description": "Description for Project 3",
       "status": "active"
     }
