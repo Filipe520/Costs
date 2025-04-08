@@ -13,18 +13,22 @@
   --color-02: #fff; /* texts & icons */
   --color-03: #ffffff; /* my name(autor) */
   --color-04: #7b7b7b; /* home => p */
+  --success-02: #639b61; /* success */
+  --error-02: #721c24; /* error */
 
   /* Background */
   --bg-01: #222; /* footer */
   --bg-02: #efefef; /* container */
   --bg-03: #222222; /* navbar */
-
-  /* trasparent */
-
   --bg-trasparent-01: rgba(0, 0, 0, 0.541);
+  --success-01: #d4edda; /* success */
+  --error-01: #f8d7da; /* error */
 
   /* Borders */
   --border-01: rgba(255, 255, 255, 0.233); /* author's edge */
+  --border-02: #000;
+  --success-03: #c3e6cb; /* success */
+  --error-03: #f5c6cb; /* error */
 }
 
 html,

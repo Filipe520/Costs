@@ -3,7 +3,7 @@ import styles from "./NewProject.module.css";
 import ProjectForm from "../../project/ProjectForm/ProjectForm";
 
 function NewProject() {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   function createPost(project) {
     // initialize cost and services
@@ -21,7 +21,9 @@ function NewProject() {
       .then((data) => {
         // redirect to /projects
         console.log(data);
-        history.push("/projects", { message: "Projeto criado com sucesso!" });
+        navigate("/projects", {
+          state: { message: "Projeto criado com sucesso!" },
+        });
       })
       .catch((error) => console.log("Error creating project:", error));
   }

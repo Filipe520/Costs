@@ -1,0 +1,22 @@
+@import "../../../index.css";
+
+.mensagem {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid var(--border-02);
+  text-align: center;
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
+
+.success {
+  background-color: var(--success-01);
+  color: var(--success-02);
+  border-color: var(--success-03);
+}
+
+.erro {
+  background-color: var(--error-01);
+  color: var(--error-02);
+  border-color: var(--error-03);
+}
