@@ -15,7 +15,12 @@
   min-height: 75%;
 }
 
-@media screen and (min-width: 1000px) {
+.start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
   }

@@ -12,8 +12,7 @@
 
 .btn:hover {
   color: var(--color-01);
-  background-color: rgba(0, 0, 0, 0.788);
-  border-bottom: 1px solid var(--color-01);
+  background-color: var(--bg-04);
 }
 
 .btn:active {

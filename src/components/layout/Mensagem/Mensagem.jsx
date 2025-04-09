@@ -12,13 +12,13 @@ function Mensagem({ tipo, mensagem }) {
 
     setVisible(true);
 
-    // const timer = setTimeout(() => {
-    //   setVisible(false);
-    // }, 3000);
+    const timer = setTimeout(() => {
+      setVisible(false);
+    }, 3000);
 
-    // return () => {
-    //   clearTimeout(timer);
-    // };
+    return () => {
+      clearTimeout(timer);
+    };
   }, [mensagem]);
   return (
     <>
