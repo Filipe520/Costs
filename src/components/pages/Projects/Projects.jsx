@@ -7,10 +7,12 @@ import styles from "./Projects.module.css";
 import ProjectCard from "./ProjectCard/ProjectCard";
 
 import { useState, useEffect } from "react";
+import Loading from "../../layout/Loading/Loading";
 
 function Projets() {
   const location = useLocation();
   const [projects, setProjects] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   let mensagem = "";
   if (location.state) {
@@ -18,17 +20,20 @@ function Projets() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/projects", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setProjects(data);
+    setTimeout(() => {
+      fetch("http://localhost:5000/projects", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => console.log(err));
+        .then((res) => res.json())
+        .then((data) => {
+          setProjects(data);
+          setRemoveLoading(true);
+        })
+        .catch((err) => console.log(err));
+    }, 500);
   }, []);
 
   return (
@@ -38,7 +43,7 @@ function Projets() {
         <LinkButton to="/newproject" text="Criar Projeto" />
       </div>
       {mensagem && <Mensagem tipo="success" mensagem={mensagem} />}
-      <Conteiner customClass="start">
+      <Conteiner className={styles.containerCenter} customClass="start">
         {projects.length > 0 &&
           projects.map(({ id, name, budget, category }) => (
             <ProjectCard
@@ -49,6 +54,12 @@ function Projets() {
               key={id}
             />
           ))}
+        {!removeLoading && <Loading />}
+        {removeLoading && projects.length === 0 && (
+          <div className={styles.noprojects}>
+            <p>Não há projetos cadastrados</p>
+          </div>
+        )}
       </Conteiner>
     </div>
   );

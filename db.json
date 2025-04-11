@@ -43,6 +43,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "b5a8",
+      "name": "HEllo 2025",
+      "budget": "45000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
