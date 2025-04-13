@@ -2,7 +2,7 @@
 
 .project_details {
   width: 100%;
-  margin: 200px 0;
+  margin: 300px 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +10,10 @@
   flex-wrap: wrap;
 
   padding: 2em;
+
+  border-radius: 5px;
+
+  box-shadow: 0px 0px 10px var(--bg-transparent-03);
 }
 
 .project_details h1,
@@ -21,7 +25,9 @@
 .project_details h1 {
   background-color: var(--bg-01);
   color: var(--color-01);
-  padding: 0.4em;
+  padding: 0.3em;
+
+  font-variant: small-caps;
 }
 
 .project_details span {
@@ -39,6 +45,9 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 2em;
+
+  padding: 0 1.2em;
 }
 
 .btn {
@@ -48,8 +57,18 @@
   padding: 0.5em 1em;
   text-decoration: none;
   transition: 0.3s ease;
-  border-bottom: 1px solid transparent;
+
   height: 40px;
+
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {
@@ -63,4 +82,11 @@
 
 .project_info {
   width: 100%;
+}
+
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-left: 0.5em;
+  gap: 10px;
 }

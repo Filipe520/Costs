@@ -1,12 +1,23 @@
 {
   "projects": [
     {
-      "id": "8a69",
-      "name": "Ola",
-      "budget": "2343",
+      "id": "0745",
+      "name": "Projeto Atualizado 2",
+      "budget": "45000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "0684",
+      "name": "Figma",
+      "budget": "20000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": []

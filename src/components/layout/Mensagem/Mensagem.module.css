@@ -15,7 +15,7 @@
   border-color: var(--success-03);
 }
 
-.erro {
+.error {
   background-color: var(--error-01);
   color: var(--error-02);
   border-color: var(--error-03);

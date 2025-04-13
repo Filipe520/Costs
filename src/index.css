@@ -28,6 +28,8 @@
   --bg-08: #fbe7c6;
   --bg-09: #fff;
   --bg-trasparent-01: rgba(0, 0, 0, 0.541);
+  --bg-transparent-02: rgba(0, 0, 0, 0.137);
+  --bg-transparent-03: rgba(0, 0, 0, 0.1); /* navbar */
   --success-01: #d4edda; /* success */
   --error-01: #f8d7da; /* error */
 

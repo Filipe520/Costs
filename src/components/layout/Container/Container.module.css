@@ -5,6 +5,8 @@
   justify-content: space-evenly;
   margin: 0 auto;
   flex-wrap: wrap;
+
+  gap: 2em;
 }
 
 .min_height {

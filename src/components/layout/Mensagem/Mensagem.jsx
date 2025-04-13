@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from "./Mensagem.module.css";
 
-function Mensagem({ tipo, mensagem }) {
+function Mensagem({ type, msg }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!mensagem) {
+    if (!msg) {
       setVisible(false);
       return;
     }
@@ -19,11 +19,11 @@ function Mensagem({ tipo, mensagem }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [mensagem]);
+  }, [msg]);
   return (
     <>
       {visible && (
-        <div className={`${styles.mensagem} ${styles[tipo]}`}>{mensagem}</div>
+        <div className={`${styles.mensagem} ${styles[type]}`}>{msg}</div>
       )}
     </>
   );
