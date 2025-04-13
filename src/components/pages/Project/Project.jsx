@@ -13,6 +13,9 @@ const Project = () => {
   const { id } = useParams();
   const [project, setProject] = useState({});
   const [showProjectForm, setShowProjectForm] = useState(false);
+  const [showServiceForm, setShowServiceForm] = useState(false);
+
+  const [services, setServices] = useState([]);
   const [mensage, setMessage] = useState();
   const [type, setType] = useState();
 
@@ -35,6 +38,8 @@ const Project = () => {
   }, [id]);
 
   function editPost(project) {
+    setMessage("");
+    setType("");
     // budget validation
     if (project.budget < project.cost) {
       setMessage("O orçamento não pode ser menor que o custo do projeto!");
@@ -63,6 +68,10 @@ const Project = () => {
 
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm);
+  }
+
+  function toggleServiceForm() {
+    setShowServiceForm(!showServiceForm);
   }
 
   return (
@@ -104,6 +113,49 @@ const Project = () => {
                 </div>
               )}
             </div>
+
+            <div className={styles.service_form_conteiner}>
+              <h2>Adicioner um serviço:</h2>
+
+              <button className={styles.btn} onClick={toggleServiceForm}>
+                {showServiceForm ? " Fechar " : "Adicionar serviço "}
+
+                {showProjectForm ? (
+                  <HiMiniXMark className={styles.icon} />
+                ) : (
+                  <BsPencil className={styles.icon} />
+                )}
+              </button>
+              <div className={styles.project_info}>
+                {showServiceForm && (
+                  <ProjectForm
+                    btnText="Adicionar serviço"
+                    projectData={project}
+                    handleSubmit={editPost}
+                  />
+                )}
+              </div>
+            </div>
+            <h2>Serviços</h2>
+            <Container customClass="start">
+              <div className={styles.services}>
+                {services.length === 0 && <p>Não há serviços cadastrados</p>}
+                {services.length > 0 &&
+                  services.map((service) => (
+                    <div className={styles.service} key={service.id}>
+                      <p>
+                        <span>Nome:</span> {service.name}
+                      </p>
+                      <p>
+                        <span>Descrição:</span> {service.description}
+                      </p>
+                      <p>
+                        <span>Valor:</span> {service.cost}
+                      </p>
+                    </div>
+                  ))}
+              </div>
+            </Container>
           </Container>
         </div>
       ) : (
