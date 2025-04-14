@@ -1,42 +1,28 @@
 {
   "projects": [
     {
-      "id": "0745",
-      "name": "GitHub",
-      "budget": "250000",
+      "id": "b6ba",
+      "name": "IESB",
+      "budget": "52000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
-      "cost": 600,
+      "cost": 17000,
       "services": [
         {
-          "name": "Meu novo serviço",
-          "cost": "1542648",
-          "id": "109eddb4-6db4-482b-9901-517ae49b034c"
+          "name": "Programador FullStack",
+          "cost": "15000",
+          "description": "Desenvolvimente de Sites + Apps",
+          "id": "90b8cf4c-d98e-40b8-a338-8aeec6fd97ce"
         },
         {
-          "name": "Meu novo serviço",
-          "cost": "100",
-          "id": "ee37b645-ffbd-4d6c-b149-93c14f62bcfa"
-        },
-        {
-          "name": "Imagens",
-          "cost": "500",
-          "id": "3129f3af-fc2a-4dae-88b5-b739c0265b3d"
+          "name": "Secratária",
+          "cost": "2000",
+          "description": "Atende os clientes + Ligações + Registros",
+          "id": "e66a8ba8-d3ec-4216-9943-a8a5df8f8ffd"
         }
       ]
-    },
-    {
-      "id": "0684",
-      "name": "Figma",
-      "budget": "20000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
     }
   ],
   "categories": [

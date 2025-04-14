@@ -10,14 +10,18 @@
   box-shadow: var(--shadow);
 
   border: 1px solid var(--border-03);
-  border-radius: 0.5rem;
+  border-radius: 2em;
 
   padding: 1em;
-  margin: 0.5%;
+  margin: 1em 0;
   min-height: 300px;
   min-width: 500px;
 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project_card div {
+  text-align: center;
 }
 
 .project_card h4 {

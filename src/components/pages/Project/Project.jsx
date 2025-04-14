@@ -7,10 +7,13 @@ import Loading from "../../layout/Loading/Loading";
 import Container from "../../layout/Container/Container";
 import ProjectForm from "../../project/ProjectForm/ProjectForm";
 import Menssage from "../../layout/Mensagem/Mensagem";
-import ServiceForm from "../../services/ServiceForm";
+import ServiceForm from "../../services/ServiceForm/ServiceForm";
+import ServiceCard from "../../services/ServiceCard/ServiceCard";
 
 import { BsPencil } from "react-icons/bs";
 import { HiMiniXMark } from "react-icons/hi2";
+
+import FormatNumber from "../../layout/FormatNumber/FormatNumber";
 
 const Project = () => {
   const { id } = useParams();
@@ -21,8 +24,6 @@ const Project = () => {
   const [services, setServices] = useState([]);
   const [mensage, setMessage] = useState();
   const [type, setType] = useState();
-
-  console.log(type);
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,6 +36,7 @@ const Project = () => {
         .then((response) => response.json())
         .then((data) => {
           setProject(data);
+          setServices(data.services);
         })
         .catch((err) => console.log(err));
     }, 1000);
@@ -117,6 +119,46 @@ const Project = () => {
       .catch((err) => console.log(err));
   }
 
+  function removeService(id) {
+    setMessage("");
+    setType("");
+    const serviceUpdated = project.services.filter(
+      (service) => service.id !== id
+    );
+    const serviceRemoved = project.services.find(
+      (service) => service.id === id
+    );
+
+    const cost = parseFloat(project.cost) - parseFloat(serviceRemoved.cost);
+
+    if (cost < 0) {
+      setMessage("Ocorreu um erro, tente novamente!");
+      setType("error");
+      return false;
+    }
+
+    project.services = serviceUpdated;
+    project.cost = cost;
+
+    fetch(`http://localhost:5000/projects/${project.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(project),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setProject(data);
+        setServices(serviceUpdated);
+        setMessage("Serviço removido com sucesso!");
+        setType("success");
+      })
+      .catch((err) => console.log(err));
+  }
+
+  const num = Number(project.budget) - Number(project.cost);
+
   return (
     <>
       {project.name ? (
@@ -140,11 +182,26 @@ const Project = () => {
                     <span>Categoria:</span> {project.category.name}
                   </p>
                   <p>
-                    <span>Total de Orçamentos:</span> {project.budget}
+                    <span>Total de Orçamentos: </span>
+                    <FormatNumber value={project.budget} />
                   </p>
                   <p>
-                    <span>Total Utilizado:</span> {project.cost}
+                    <span>Total Utilizado: </span>
+                    <FormatNumber value={project.cost} />
                   </p>
+
+                  {/* verifica se o saldo é negativo */}
+                  {num < 0 ? (
+                    <p className={styles.error}>
+                      <span>Saldo negativo</span>
+                      <FormatNumber value={num} />
+                    </p>
+                  ) : (
+                    <p className={styles.success}>
+                      <span>Saldo positivo</span>
+                      <FormatNumber value={num} />
+                    </p>
+                  )}
                 </div>
               ) : (
                 <div className={styles.project_info}>
@@ -185,17 +242,14 @@ const Project = () => {
                 {services.length === 0 && <p>Não há serviços cadastrados</p>}
                 {services.length > 0 &&
                   services.map((service) => (
-                    <div className={styles.service} key={service.id}>
-                      <p>
-                        <span>Nome:</span> {service.name}
-                      </p>
-                      <p>
-                        <span>Descrição:</span> {service.description}
-                      </p>
-                      <p>
-                        <span>Valor:</span> {service.cost}
-                      </p>
-                    </div>
+                    <ServiceCard
+                      id={service.id}
+                      name={service.name}
+                      description={service.description}
+                      cost={service.cost}
+                      key={service.id}
+                      handleRemove={removeService}
+                    />
                   ))}
               </div>
             </Container>

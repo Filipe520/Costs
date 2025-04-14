@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import { BsFillTrashFill, BsPencil } from "react-icons/bs";
 
+import FormatNumber from "../../../layout/FormatNumber/FormatNumber";
+
 const ProjectCard = ({ id, name, budget, category, handleRemover }) => {
   const remove = (e) => {
     e.preventDefault();
@@ -13,7 +15,8 @@ const ProjectCard = ({ id, name, budget, category, handleRemover }) => {
     <div className={styles.project_card}>
       <h4>{name}</h4>
       <p>
-        <span>Orçamento:</span> R$ {budget}
+        <span>Orçamento:</span>
+        <FormatNumber value={budget} />
       </p>
       <p className={styles.category_text}>
         <span className={`${styles[category.toLowerCase()]}`}></span> {category}

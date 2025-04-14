@@ -1,9 +1,7 @@
-import styles from "./ServiceForm.module.css";
-
 import { useState } from "react";
 
-import Input from "../form/Input/Input";
-import SubmitButton from "../form/SubmitButton/SubmitButton";
+import Input from "../../form/Input/input";
+import SubmitButton from "../../form/SubmitButton/SubmitButton";
 
 const ServiceForm = ({ handleSubmit, btnText, projectData }) => {
   const [service, setService] = useState({});
@@ -19,10 +17,10 @@ const ServiceForm = ({ handleSubmit, btnText, projectData }) => {
   }
 
   return (
-    <div className={styles.form}>
+    <div>
       <h2>Criar Serviço</h2>
-      <form onSubmit={submit} className={styles.form}>
-        <div className={styles.inputGroup}>
+      <form onSubmit={submit}>
+        <div>
           <label htmlFor="name">Nome do Serviço</label>
           <Input
             type="text"
@@ -31,9 +29,10 @@ const ServiceForm = ({ handleSubmit, btnText, projectData }) => {
             placeholder="Insira o nome do serviço.."
             handleOnChange={handleChange}
             required
+            value={service[name]}
           />
         </div>
-        <div className={styles.inputGroup}>
+        <div>
           <label htmlFor="cost">Custo do Serviço</label>
           <Input
             type="number"
@@ -44,13 +43,14 @@ const ServiceForm = ({ handleSubmit, btnText, projectData }) => {
             required
           />
         </div>
-        <div className={styles.inputGroup}>
+        <div>
           <label htmlFor="description">Descrição do Serviço</label>
           <Input
+            type="text"
             id="description"
             name="description"
             placeholder="Insira a descrição do serviço.."
-            onChange={handleChange}
+            handleOnChange={handleChange}
             required
           />
         </div>
