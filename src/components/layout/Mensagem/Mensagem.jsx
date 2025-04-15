@@ -21,11 +21,11 @@ function Mensagem({ type, msg }) {
     };
   }, [msg]);
   return (
-    <>
+    <div className={styles.mensagemContainer}>
       {visible && (
         <div className={`${styles.mensagem} ${styles[type]}`}>{msg}</div>
       )}
-    </>
+    </div>
   );
 }
 

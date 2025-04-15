@@ -26,6 +26,8 @@ const Project = () => {
   const [type, setType] = useState();
 
   useEffect(() => {
+    setMessage(() => "");
+    setType(() => "");
     setTimeout(() => {
       fetch(`http://localhost:5000/projects/${id}`, {
         method: "GET",
@@ -43,8 +45,8 @@ const Project = () => {
   }, [id]);
 
   function editPost(project) {
-    setMessage("");
-    setType("");
+    setMessage(() => "");
+    setType(() => "");
     // budget validation
     if (project.budget < project.cost) {
       setMessage("O orçamento não pode ser menor que o custo do projeto!");
@@ -113,8 +115,8 @@ const Project = () => {
       .then((data) => {
         setShowServiceForm(false);
         setProject(data);
-        setMessage("Serviço adicionado com sucesso!");
-        setType("success");
+        setMessage(() => "Serviço adicionado com sucesso!");
+        setType(() => "success");
       })
       .catch((err) => console.log(err));
   }

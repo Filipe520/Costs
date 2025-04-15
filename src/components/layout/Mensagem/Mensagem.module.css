@@ -1,12 +1,11 @@
 @import "../../../index.css";
 
-.mensagem {
-  width: 100%;
-  padding: 1em;
-  border: 1px solid var(--border-02);
-  text-align: center;
-  margin-bottom: 2em;
-  border-radius: 5px;
+.mensagemContainer {
+  position: fixed;
+  top: 0;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
 }
 
 .success {
@@ -19,4 +18,30 @@
   background-color: var(--error-01);
   color: var(--error-02);
   border-color: var(--error-03);
+}
+
+@keyframes mensagem {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mensagem {
+  width: 300px;
+  padding: 1em;
+  border: 1px solid var(--border-02);
+  text-align: center;
+  margin-bottom: 2em;
+  border-radius: 5px;
+
+  animation: mensagem 0.5s ease-in-out;
 }
