@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Input from "../../form/Input/input";
+import Input from "../../form/input/Input";
 import SubmitButton from "../../form/SubmitButton/SubmitButton";
 
 const ServiceForm = ({ handleSubmit, btnText, projectData }) => {
