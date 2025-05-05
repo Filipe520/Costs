@@ -20,7 +20,7 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Terminal Commands
 
-To set up the project, run the following commands in your terminal:clicar aqui para acessar o site - https://costs-2025.vercel.app/
+To set up the project, run the following commands in your terminal
 
 ```bash
 npm install json-server react-icons react-router-dom uuid
