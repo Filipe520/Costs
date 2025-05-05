@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import styles from "./ProjectForm.module.css";
-import Input from "../../form/Input/input";
+import Input from "../../form/input_botao/Input";
 import Select from "../../form/Select/Select";
 import SubmitButton from "../../form/SubmitButton/SubmitButton";
 
